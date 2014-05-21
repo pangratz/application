@@ -93,7 +93,7 @@ def after_restart(arg=nil, &block)
 end
 
 def release_path
-  application_provider.release_path
+  @cached_release_path ||= application_provider.release_path
 end
 
 def shared_path
